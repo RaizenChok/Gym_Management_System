@@ -64,6 +64,7 @@
             this.joindate = new RoundedTextBox();
             this.backtohome2 = new System.Windows.Forms.Button();
             this.roundedPictureBox1 = new RoundedPictureBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox1)).BeginInit();
@@ -75,6 +76,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.Donebtn);
             this.panel1.Controls.Add(this.Mobilenumtxt);
             this.panel1.Controls.Add(this.label12);
@@ -108,7 +110,7 @@
             this.panel1.Controls.Add(this.birthdate);
             this.panel1.Controls.Add(this.joindate);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(208, 128);
+            this.panel1.Location = new System.Drawing.Point(208, 158);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1306, 760);
             this.panel1.TabIndex = 51;
@@ -543,11 +545,21 @@
             // 
             this.roundedPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.roundedPictureBox1.BorderRadius = 80;
-            this.roundedPictureBox1.Location = new System.Drawing.Point(193, 88);
+            this.roundedPictureBox1.Location = new System.Drawing.Point(193, 141);
             this.roundedPictureBox1.Name = "roundedPictureBox1";
-            this.roundedPictureBox1.Size = new System.Drawing.Size(1516, 857);
+            this.roundedPictureBox1.Size = new System.Drawing.Size(1516, 834);
             this.roundedPictureBox1.TabIndex = 52;
             this.roundedPictureBox1.TabStop = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Location = new System.Drawing.Point(1026, 557);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
+            this.checkBox1.TabIndex = 70;
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // EditMemberInfo
             // 
@@ -609,5 +621,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button Donebtn;
         private System.Windows.Forms.Button backtohome2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

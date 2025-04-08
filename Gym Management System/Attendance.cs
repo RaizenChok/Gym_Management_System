@@ -16,5 +16,10 @@ namespace Gym_Management_System
         {
             InitializeComponent();
         }
+
+        private void Attendance_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

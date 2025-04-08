@@ -338,7 +338,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(1164, 71);
+            this.button2.Location = new System.Drawing.Point(1134, 71);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(220, 54);
             this.button2.TabIndex = 20;
@@ -349,7 +349,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(1259, 688);
+            this.button3.Location = new System.Drawing.Point(1232, 702);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(106, 45);
             this.button3.TabIndex = 21;
@@ -394,9 +394,9 @@
             this.panel1.Controls.Add(this.genderlbl);
             this.panel1.Controls.Add(this.Fnamelbl);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(224, 136);
+            this.panel1.Location = new System.Drawing.Point(209, 135);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1377, 760);
+            this.panel1.Size = new System.Drawing.Size(1353, 760);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 

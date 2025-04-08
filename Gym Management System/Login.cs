@@ -65,9 +65,9 @@ namespace Gym_Management_System
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
-                passwordtxt.UseSystemPasswordChar = false;
-            else
                 passwordtxt.UseSystemPasswordChar = true;
+            else
+                passwordtxt.UseSystemPasswordChar = false;
         }
 
         private void Savebutton_Click(object sender, EventArgs e)

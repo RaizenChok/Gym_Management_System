@@ -304,7 +304,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(880, 86);
+            this.pictureBox1.Location = new System.Drawing.Point(898, 86);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(173, 135);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -324,9 +324,9 @@
             this.Login.ForeColor = System.Drawing.Color.Black;
             this.Login.Location = new System.Drawing.Point(1210, 807);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(129, 60);
+            this.Login.Size = new System.Drawing.Size(153, 60);
             this.Login.TabIndex = 42;
-            this.Login.Text = "Login";
+            this.Login.Text = "Login as Member";
             this.Login.UseVisualStyleBackColor = false;
             this.Login.Click += new System.EventHandler(this.Login_Click);
             // 
@@ -342,15 +342,15 @@
             this.Admin.ForeColor = System.Drawing.Color.Black;
             this.Admin.Location = new System.Drawing.Point(632, 807);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(131, 60);
+            this.Admin.Size = new System.Drawing.Size(153, 60);
             this.Admin.TabIndex = 43;
-            this.Admin.Text = "Admin";
+            this.Admin.Text = "Login as Admin";
             this.Admin.UseVisualStyleBackColor = false;
             this.Admin.Click += new System.EventHandler(this.Admin_Click);
             // 
             // joindate
             // 
-            this.joindate.Location = new System.Drawing.Point(653, 408);
+            this.joindate.Location = new System.Drawing.Point(739, 425);
             this.joindate.Name = "joindate";
             this.joindate.Size = new System.Drawing.Size(100, 22);
             this.joindate.TabIndex = 45;
@@ -398,7 +398,7 @@
             this.lnametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lnametxt.BorderRadius = 20;
             this.lnametxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lnametxt.Location = new System.Drawing.Point(632, 398);
+            this.lnametxt.Location = new System.Drawing.Point(632, 414);
             this.lnametxt.Multiline = true;
             this.lnametxt.Name = "lnametxt";
             this.lnametxt.Size = new System.Drawing.Size(227, 44);

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.AxHost;
 
 namespace Gym_Management_System
@@ -24,22 +25,7 @@ namespace Gym_Management_System
 
         private void label2_Click(object sender, EventArgs e)
         {
-
         }
-
-        private void searchTxt_TextChanged(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-JES4066\\SQLEXPRESS; Initial Catalog=GYM; Integrated Security=True;");
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-
-            cmd.CommandText = "select * from NewMember where MID = " + memberIdTextbox.Text + "";
-
-            SqlDataAdapter DA = new SqlDataAdapter(cmd);
-            DataSet DS = new DataSet();
-            DA.Fill(DS);
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -47,69 +33,79 @@ namespace Gym_Management_System
 
         private void Continue_Click(object sender, EventArgs e)
         {
+            string connectionString = @"Data Source=DESKTOP-JES4066\SQLEXPRESS;Initial Catalog=GYM;Integrated Security=True";
+
+            // Get values from UI
             string memberId = memberIdTextbox.Text.Trim();
             string memberName = nameTextbox.Text.Trim();
-            decimal paymentAmount;
+            string amountPaidText = paymentTextbox.Text.Trim(); // Assuming this is the textbox where the user enters the payment amount
+            decimal remainingBalance = 0; // Optional: you can calculate this if needed
+            DateTime paymentDate = DateTime.Now;
 
-            if (string.IsNullOrEmpty(memberId) || string.IsNullOrEmpty(memberName))
+            // Simple validation
+            if (string.IsNullOrEmpty(memberId) || string.IsNullOrEmpty(memberName) || string.IsNullOrEmpty(amountPaidText))
             {
-                MessageBox.Show("Please enter both Member ID and Name.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill in all required fields.", "Missing Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (!decimal.TryParse(paymentTextbox.Text.Trim(), out paymentAmount) || paymentAmount <= 0)
+            if (!int.TryParse(memberId, out int parsedMID))
             {
-                MessageBox.Show("Please enter a valid payment amount.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Member ID must be a number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-JES4066\\SQLEXPRESS; Initial Catalog=GYM; Integrated Security=True;"))
+            if (!decimal.TryParse(amountPaidText, out decimal amountPaid))
             {
-                try
+                MessageBox.Show("Amount Paid must be a valid decimal value.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    con.Open();
+                    conn.Open();
 
-                    // Check if the Member exists
-                    string query = "SELECT COUNT(*) FROM NewMember WHERE MID = @MID AND Firstname + ' ' + Lastname = @FullName";
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    string query = @"INSERT INTO Payments (MID, MemberName, AmountPaid, RemainingBalance, PaymentDate)
+                             VALUES (@MID, @MemberName, @AmountPaid, @RemainingBalance, @PaymentDate)";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@MID", memberId);
-                        cmd.Parameters.AddWithValue("@FullName", memberName);
+                        cmd.Parameters.AddWithValue("@MID", parsedMID);
+                        cmd.Parameters.AddWithValue("@MemberName", memberName);
+                        cmd.Parameters.AddWithValue("@AmountPaid", amountPaid);
+                        cmd.Parameters.AddWithValue("@RemainingBalance", remainingBalance);
+                        cmd.Parameters.AddWithValue("@PaymentDate", paymentDate);
 
-                        int count = (int)cmd.ExecuteScalar();
-                        if (count == 0)
+                        int rows = cmd.ExecuteNonQuery();
+
+                        if (rows > 0)
                         {
-                            MessageBox.Show("Member ID and Name do not match!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
+                            MessageBox.Show("Payment successfully recorded!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            // Optionally clear form
+                            ClearForm();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Payment failed to record.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-
-                    // Compute Remaining Balance
-                    decimal remainingBalance = InitialAmount - paymentAmount;
-
-                    // Update Payment Record
-                    string insertQuery = "INSERT INTO Payments (MID, MemberName, AmountPaid, RemainingBalance, PaymentDate) VALUES (@MID, @MemberName, @AmountPaid, @RemainingBalance, GETDATE())";
-                    using (SqlCommand cmd = new SqlCommand(insertQuery, con))
-                    {
-                        cmd.Parameters.AddWithValue("@MID", memberId);
-                        cmd.Parameters.AddWithValue("@MemberName", memberName);
-                        cmd.Parameters.AddWithValue("@AmountPaid", paymentAmount);
-                        cmd.Parameters.AddWithValue("@RemainingBalance", remainingBalance);
-
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    MessageBox.Show($"Payment successful!\nRemaining Balance: {remainingBalance:C}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Clear Input Fields
-                    paymentTextbox.Text = "";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        private void ClearForm()
+        {
+            memberIdTextbox.Clear();
+            nameTextbox.Clear();
+            paymentTextbox.Clear();
+        }
+
 
 
 
@@ -159,6 +155,13 @@ namespace Gym_Management_System
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NewMember gymform = new NewMember();
+            gymform.Show();
+            this.Close();
         }
     }
 }

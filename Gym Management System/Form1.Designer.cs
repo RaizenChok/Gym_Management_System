@@ -134,11 +134,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 55.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Impact", 55.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(180, 263);
+            this.label1.Location = new System.Drawing.Point(236, 214);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1244, 104);
+            this.label1.Size = new System.Drawing.Size(935, 111);
             this.label1.TabIndex = 7;
             this.label1.Text = "TRANSFORM YOUR BODY,";
             // 
@@ -147,11 +148,11 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 55.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Impact", 55.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(200, 387);
+            this.label2.Location = new System.Drawing.Point(236, 343);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1178, 104);
+            this.label2.Size = new System.Drawing.Size(885, 111);
             this.label2.TabIndex = 8;
             this.label2.Text = "TRANSFORM YOUR LIFE.";
             this.label2.Click += new System.EventHandler(this.label2_Click);

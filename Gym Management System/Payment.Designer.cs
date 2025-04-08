@@ -45,7 +45,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.roundedPictureBox2 = new RoundedPictureBox();
             this.resetbutton = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundedPictureBox2)).BeginInit();
@@ -247,27 +246,23 @@
             this.resetbutton.UseVisualStyleBackColor = false;
             this.resetbutton.Click += new System.EventHandler(this.resetbutton_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.label6.Font = new System.Drawing.Font("Ebrima", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(115, 897);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(367, 25);
-            this.label6.TabIndex = 58;
-            this.label6.Text = "Don\'t have an account yet? Register here.";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(120, 832);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(121, 885);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(375, 36);
-            this.button1.TabIndex = 59;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.TabIndex = 58;
+            this.button1.Text = "Don\'t have an account yet? Register here.";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Payment
             // 
@@ -278,7 +273,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.resetbutton);
             this.Controls.Add(this.roundedPictureBox2);
             this.Controls.Add(this.label9);
@@ -326,7 +320,6 @@
         private System.Windows.Forms.Label label9;
         private RoundedPictureBox roundedPictureBox2;
         private System.Windows.Forms.Button resetbutton;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
     }
 }

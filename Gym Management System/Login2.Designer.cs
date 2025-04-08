@@ -36,10 +36,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.passwordtxt2 = new RoundedTextBox();
-            this.Usertxt2 = new RoundedTextBox();
-            this.roundedPictureBox1 = new RoundedPictureBox();
             this.Loginbtn2 = new System.Windows.Forms.Button();
+            this.Usertxt2 = new RoundedTextBox();
+            this.passwordtxt2 = new RoundedTextBox();
+            this.roundedPictureBox1 = new RoundedPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -138,37 +138,6 @@
             this.pictureBox3.TabIndex = 41;
             this.pictureBox3.TabStop = false;
             // 
-            // passwordtxt2
-            // 
-            this.passwordtxt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.passwordtxt2.BorderRadius = 20;
-            this.passwordtxt2.Location = new System.Drawing.Point(309, 336);
-            this.passwordtxt2.Multiline = true;
-            this.passwordtxt2.Name = "passwordtxt2";
-            this.passwordtxt2.PasswordChar = '•';
-            this.passwordtxt2.Size = new System.Drawing.Size(264, 44);
-            this.passwordtxt2.TabIndex = 50;
-            // 
-            // Usertxt2
-            // 
-            this.Usertxt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Usertxt2.BorderRadius = 20;
-            this.Usertxt2.Location = new System.Drawing.Point(307, 257);
-            this.Usertxt2.Multiline = true;
-            this.Usertxt2.Name = "Usertxt2";
-            this.Usertxt2.Size = new System.Drawing.Size(264, 44);
-            this.Usertxt2.TabIndex = 51;
-            // 
-            // roundedPictureBox1
-            // 
-            this.roundedPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.roundedPictureBox1.BorderRadius = 80;
-            this.roundedPictureBox1.Location = new System.Drawing.Point(141, 62);
-            this.roundedPictureBox1.Name = "roundedPictureBox1";
-            this.roundedPictureBox1.Size = new System.Drawing.Size(588, 720);
-            this.roundedPictureBox1.TabIndex = 52;
-            this.roundedPictureBox1.TabStop = false;
-            // 
             // Loginbtn2
             // 
             this.Loginbtn2.BackColor = System.Drawing.Color.Orange;
@@ -185,6 +154,39 @@
             this.Loginbtn2.Text = "Login";
             this.Loginbtn2.UseVisualStyleBackColor = false;
             this.Loginbtn2.Click += new System.EventHandler(this.Loginbtn2_Click_1);
+            // 
+            // Usertxt2
+            // 
+            this.Usertxt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Usertxt2.BorderRadius = 20;
+            this.Usertxt2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Usertxt2.Location = new System.Drawing.Point(307, 257);
+            this.Usertxt2.Multiline = true;
+            this.Usertxt2.Name = "Usertxt2";
+            this.Usertxt2.Size = new System.Drawing.Size(264, 44);
+            this.Usertxt2.TabIndex = 51;
+            // 
+            // passwordtxt2
+            // 
+            this.passwordtxt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.passwordtxt2.BorderRadius = 20;
+            this.passwordtxt2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordtxt2.Location = new System.Drawing.Point(309, 336);
+            this.passwordtxt2.Multiline = true;
+            this.passwordtxt2.Name = "passwordtxt2";
+            this.passwordtxt2.PasswordChar = '•';
+            this.passwordtxt2.Size = new System.Drawing.Size(264, 44);
+            this.passwordtxt2.TabIndex = 50;
+            // 
+            // roundedPictureBox1
+            // 
+            this.roundedPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.roundedPictureBox1.BorderRadius = 80;
+            this.roundedPictureBox1.Location = new System.Drawing.Point(141, 62);
+            this.roundedPictureBox1.Name = "roundedPictureBox1";
+            this.roundedPictureBox1.Size = new System.Drawing.Size(588, 720);
+            this.roundedPictureBox1.TabIndex = 52;
+            this.roundedPictureBox1.TabStop = false;
             // 
             // Login2
             // 
