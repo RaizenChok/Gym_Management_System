@@ -384,7 +384,8 @@
             this.fnametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.fnametxt.BorderRadius = 20;
             this.fnametxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.fnametxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fnametxt.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fnametxt.ForeColor = System.Drawing.SystemColors.Window;
             this.fnametxt.Location = new System.Drawing.Point(632, 301);
             this.fnametxt.Multiline = true;
             this.fnametxt.Name = "fnametxt";
@@ -398,6 +399,8 @@
             this.lnametxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lnametxt.BorderRadius = 20;
             this.lnametxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lnametxt.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnametxt.ForeColor = System.Drawing.SystemColors.Window;
             this.lnametxt.Location = new System.Drawing.Point(632, 414);
             this.lnametxt.Multiline = true;
             this.lnametxt.Name = "lnametxt";
